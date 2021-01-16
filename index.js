@@ -3,10 +3,13 @@ function takeANumber(currentLine, name) {
   return `Welcome, ${name}. You are number ${currentLine.length} in line.`;
 }
 
-function nowServing(katzDeliLine) {
+
+function nowServing(katzDeliLine){
   if (katzDeliLine.length > 0) {
-    return "Currently serving " + katzDeliLine.shift() + ".";
-  } else  {
+    console.log(`Currently serving ${katzDeliLine[0]}.`);
+    katzDeliLine.shift();
+    return katzDeliLine;
+  } else {
     return "There is nobody waiting to be served!";
   }
 }
